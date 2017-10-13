@@ -34,7 +34,7 @@ define Package/libcryptopp
 	URL:=https://github.com/weidai11/cryptopp
 endef
 
-define Package/package/libcryptoxx
+define Package/package/libcryptopp
 	Crypto++ is library for creating C++ programs which use cryptographic algorithms.
 	The library uses a Pipes & Filters architecture with heavy use of templates and
 	abstract base classes.
