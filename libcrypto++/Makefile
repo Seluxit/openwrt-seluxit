@@ -5,6 +5,7 @@
 # See /LICENSE for more information.
 #
 #PKG_REMOVE_FILES:=aclocal.m4 GNUmakefile
+#PKG_SOURCE_URL:=http://ftp.de.debian.org/debian/pool/main/libc/libcrypto++/
 
 include $(TOPDIR)/rules.mk
 
@@ -14,8 +15,7 @@ PKG_RELEASE:=4
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/weidai11/cryptopp
-#PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION).orig.tar.gz
-#PKG_SOURCE_URL:=http://ftp.de.debian.org/debian/pool/main/libc/libcrypto++/
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_VERSION:=5dcf3e8554a5216275e590114c74c45426b29160
 
 #PKG_MD5SUM:=681f830145bf93cbc16113eaf61fbe2a
