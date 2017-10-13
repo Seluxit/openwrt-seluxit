@@ -40,23 +40,23 @@ define Package/package/libcryptoxx
 	abstract base classes.
 endef
 
-CONFIGURE_ARGS += \
-	--enable-static \
-	--enable-shared
-
 TARGET_LDFLAGS += \
 	-lpthread
+
+define Build/Compile
+	$(MAKE) static dynamic -C $(PKG_BUILD_DIR) $(TARGET_CONFIGURE_OPTS) 
+endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include/cryptopp
 	$(CP) $(PKG_INSTALL_DIR)/usr/local/include/cryptopp/* $(1)/usr/include/cryptopp/
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/local/lib/libcryptopp.{a,so*} $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/local/lib/libcryptopp.{a,so} $(1)/usr/lib/
 endef
 
 define Package/libcryptoxx/install
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcrypto++.so* $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcryptopp.{a,so} $(1)/usr/lib/
 endef
 
 $(eval $(call BuildPackage,libcryptopp))
