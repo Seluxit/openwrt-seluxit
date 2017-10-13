@@ -8,25 +8,29 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=libcrypto++
-PKG_VERSION:=5.6.0
-PKG_RELEASE:=3
+PKG_NAME:=libcryptopp
+PKG_VERSION:=5.6.5
+PKG_RELEASE:=4
 
-PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION).orig.tar.gz
-PKG_SOURCE_URL:=http://ftp.de.debian.org/debian/pool/main/libc/libcrypto++/
-PKG_MD5SUM:=681f830145bf93cbc16113eaf61fbe2a
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/weidai11/cryptopp
+#PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION).orig.tar.gz
+#PKG_SOURCE_URL:=http://ftp.de.debian.org/debian/pool/main/libc/libcrypto++/
+PKG_SOURCE_VERSION:=5dcf3e8554a5216275e590114c74c45426b29160
+
+#PKG_MD5SUM:=681f830145bf93cbc16113eaf61fbe2a
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/libcryptoxx
+define Package/libcryptopp
 	SECTION:=libs
 	CATEGORY:=Libraries
 	DEPENDS:=+libpthread +libstdcpp
 	TITLE:=Crypto++ is library for creating C++ programs which use cryptographic algorithms
-	URL:=http://packages.debian.org/sid/libcrypto++-dev
+	URL:=https://github.com/weidai11/cryptopp
 endef
 
 define Package/package/libcryptoxx
@@ -43,8 +47,8 @@ TARGET_LDFLAGS += \
 	-lpthread
 
 define Build/InstallDev
-	$(INSTALL_DIR) $(1)/usr/include/crypto++
-	$(CP) $(PKG_INSTALL_DIR)/usr/include/crypto--/* $(1)/usr/include/crypto++/
+	$(INSTALL_DIR) $(1)/usr/include/cryptopp
+	$(CP) $(PKG_INSTALL_DIR)/usr/include/cryptopp/* $(1)/usr/include/cryptopp/
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcrypto++.{a,so*} $(1)/usr/lib/
 endef
@@ -54,4 +58,4 @@ define Package/libcryptoxx/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcrypto++.so* $(1)/usr/lib/
 endef
 
-$(eval $(call BuildPackage,libcryptoxx))
+$(eval $(call BuildPackage,libcryptopp))
