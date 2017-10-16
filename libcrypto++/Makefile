@@ -10,8 +10,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libcryptopp
-PKG_VERSION:=5.6.5
-PKG_RELEASE:=4
+PKG_VERSION:=6.0.0
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/weidai11/cryptopp
@@ -54,7 +54,7 @@ define Build/InstallDev
 	$(CP) $(PKG_INSTALL_DIR)/usr/local/lib/libcryptopp.{a,so} $(1)/usr/lib/
 endef
 
-define Package/libcryptoxx/install
+define Package/libcryptopp/install
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcryptopp.{a,so} $(1)/usr/lib/
 endef
