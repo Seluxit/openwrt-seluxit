@@ -19,7 +19,7 @@ PKG_SOURCE_PROTO:=hg
 PKG_SOURCE_URL:=ssh://seluxit.com/../../revisioncontrol/hg/c/qlora
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=3aae42b7b986
+PKG_SOURCE_VERSION:=3319de611fa4
 
 
 include $(INCLUDE_DIR)/package.mk
