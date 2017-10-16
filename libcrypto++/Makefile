@@ -56,7 +56,7 @@ endef
 
 define Package/libcryptopp/install
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcryptopp.{a,so} $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/local/lib/libcryptopp.{a,so} $(1)/usr/lib/
 endef
 
 $(eval $(call BuildPackage,libcryptopp))
