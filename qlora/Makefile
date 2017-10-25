@@ -19,10 +19,10 @@ PKG_SOURCE_PROTO:=hg
 PKG_SOURCE_URL:=ssh://seluxit.com/../../revisioncontrol/hg/c/qlora
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=3aae42b7b986
-
+PKG_SOURCE_VERSION:=3319de611fa4
 
 include $(INCLUDE_DIR)/package.mk
+include $(INCLUDE_DIR)/cmake.mk
 
 define Package/qlora
 	SECTION:=utils
@@ -69,10 +69,10 @@ endef
 	#cmake $(PKG_BUILD_DIR)/CMakeLists.txt
 #endef
 
-define Build/Compile
-	$(MAKE) -C $(PKG_BUILD_DIR)
-	$(STRIP) $(PKG_BUILD_DIR)/qlora
-endef
+#define Build/Compile
+	#$(MAKE) -C $(PKG_BUILD_DIR)
+	#$(STRIP) $(PKG_BUILD_DIR)/qlora
+#endef
 
 define Package/qlora/install
 	$(INSTALL_DIR) $(1)/usr/bin
