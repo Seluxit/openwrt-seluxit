@@ -28,11 +28,11 @@ PKG_INSTALL:=1
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libcryptopp
-	SECTION:=libs
-	CATEGORY:=Libraries
-	DEPENDS:=+libpthread +libstdcpp
-	TITLE:=Crypto++ is library for creating C++ programs which use cryptographic algorithms
-	URL:=https://github.com/weidai11/cryptopp
+    SECTION:=libs
+    CATEGORY:=Libraries
+    DEPENDS:=+libpthread +libstdcpp
+    TITLE:=Library for creating cryptographic algorithms
+    URL:=https://github.com/weidai11/cryptopp
 endef
 
 define Package/package/libcryptopp
