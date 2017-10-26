@@ -13,13 +13,13 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=roundtest
 PKG_VERSION:=0.0.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/sigidagi/round.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=9ff6b4e295872186b4844d39e5e336077ff01c87
+PKG_SOURCE_VERSION:=3e1f247a5c2df4f6ae06fce268bf2f9ec14495bc
 PKG_MAINTAINER:=Sigitas Dagilis<sigis@seluxit.com>
 
 include $(INCLUDE_DIR)/package.mk
