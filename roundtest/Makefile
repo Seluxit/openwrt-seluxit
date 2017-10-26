@@ -26,18 +26,19 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/roundtest
-	SECTION:=utils
-	CATEGORY:=Utilities
-	TITLE:=Round test....
+  SECTION:=utils
+  CATEGORY:=Utilities
+  TITLE:=Round test....
+  DEPENDS:=+stdc++
 endef
 
 define Package/roundtest/description
-	Just a simple test. 
+  Just a simple test. 
 endef
 
 define Package/roundtest/install
-	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/roundtest $(1)/usr/bin/
+  $(INSTALL_DIR) $(1)/usr/bin
+  $(INSTALL_BIN) $(PKG_BUILD_DIR)/roundtest $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,roundtest))
