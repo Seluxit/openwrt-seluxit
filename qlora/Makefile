@@ -30,7 +30,7 @@ define Package/qlora
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=Qlora - gateway which talk IoT with Lora devices.
-	DEPENDS:=+libcryptopp +libev +libuuid
+	DEPENDS:=+stdc++ +libcryptopp +libev +libuuid
 endef
 
 define Package/qlora/description
@@ -78,7 +78,7 @@ endef
 
 define Package/qlora/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/qlora $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/qlora/qlora $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,qlora))
