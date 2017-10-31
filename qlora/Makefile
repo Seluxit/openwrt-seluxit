@@ -30,7 +30,7 @@ define Package/qlora
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=Qlora - gateway which talk IoT with Lora devices.
-	DEPENDS:=+libcryptopp +libev +liblua +libuuid
+	DEPENDS:=+libcryptopp +libev +libuuid
 endef
 
 define Package/qlora/description
