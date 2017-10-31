@@ -12,14 +12,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qlora
-PKG_VERSION:=0.0.1
-PKG_RELEASE:=2
+PKG_VERSION:=0.0.2
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=hg
 PKG_SOURCE_URL:=ssh://seluxit.com/../../revisioncontrol/hg/c/qlora
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=3319de611fa4
+PKG_SOURCE_VERSION:=473bd51d41a6
 PKG_MAINTAINER:=Sigitas Dagilis<sigis@seluxit.com>
 
 
