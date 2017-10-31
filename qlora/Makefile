@@ -19,7 +19,7 @@ PKG_SOURCE_PROTO:=hg
 PKG_SOURCE_URL:=ssh://seluxit.com/../../revisioncontrol/hg/c/qlora
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=473bd51d41a6
+PKG_SOURCE_VERSION:=9e55c727d3d9
 PKG_MAINTAINER:=Sigitas Dagilis<sigis@seluxit.com>
 
 
@@ -30,21 +30,21 @@ define Package/qlora
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=Qlora - gateway which talk IoT with Lora devices.
-	DEPENDS:=+stdc++ +libcryptopp +libev +libuuid
+	DEPENDS:=+libcryptopp +libev +libuuid
 endef
 
 define Package/qlora/description
 	Qlora is gateway software which communicates with LoRa meter device and Seluxit backend. 
 endef
 
-define Build/Configure
-	cmake $(PKG_BUILD_DIR)/CMakeLists.txt
-endef
+#define Build/Configure
+	#cmake $(PKG_BUILD_DIR)/CMakeLists.txt
+#endef
 
-define Build/Compile
-	$(MAKE) -C $(PKG_BUILD_DIR)
-	$(STRIP) $(PKG_BUILD_DIR)/src/qlora/qlora
-endef
+#define Build/Compile
+	#$(MAKE) -C $(PKG_BUILD_DIR)
+	#$(STRIP) $(PKG_BUILD_DIR)/src/qlora/qlora
+#endef
 
 define Package/qlora/install
 	$(INSTALL_DIR) $(1)/usr/bin
