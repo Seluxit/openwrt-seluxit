@@ -48,12 +48,12 @@ define Build/Compile
 	$(MAKE) static dynamic -C $(PKG_BUILD_DIR) $(TARGET_CONFIGURE_OPTS) 
 endef
 
-#define Build/InstallDev
-	#$(INSTALL_DIR) $(1)/usr/include/cryptopp
-	#$(CP) $(PKG_INSTALL_DIR)/usr/local/include/cryptopp/* $(1)/usr/include/cryptopp/
-	#$(INSTALL_DIR) $(1)/usr/lib
-	#$(CP) $(PKG_INSTALL_DIR)/usr/local/lib/libcryptopp.{a,so} $(1)/usr/lib/
-#endef
+define Build/InstallDev
+	$(INSTALL_DIR) $(1)/usr/include/cryptopp
+	$(CP) $(PKG_INSTALL_DIR)/usr/local/include/cryptopp/* $(1)/usr/include/cryptopp/
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(CP) $(PKG_INSTALL_DIR)/usr/local/lib/libcryptopp.{a,so*} $(1)/usr/lib/
+endef
 
 define Package/libcryptopp/install
 	$(INSTALL_DIR) $(1)/usr/lib
