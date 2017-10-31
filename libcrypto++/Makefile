@@ -30,7 +30,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/libcryptopp
     SECTION:=libs
     CATEGORY:=Libraries
-    DEPENDS:=+libpthread +libstdcpp
+    DEPENDS:=+libpthread 
     TITLE:=Library for creating cryptographic algorithms
     URL:=https://github.com/weidai11/cryptopp
 endef
