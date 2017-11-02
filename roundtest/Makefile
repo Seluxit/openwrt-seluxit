@@ -25,11 +25,11 @@ PKG_MAINTAINER:=Sigitas Dagilis<sigis@seluxit.com>
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
+#DEPENDS:=+stdc++
 define Package/roundtest
-  SECTION:=utils
-  CATEGORY:=Utilities
-  TITLE:=Round test....
-  DEPENDS:=+stdc++
+	SECTION:=utils
+	CATEGORY:=Utilities
+	TITLE:=Round test....
 endef
 
 define Package/roundtest/description
@@ -37,8 +37,8 @@ define Package/roundtest/description
 endef
 
 define Package/roundtest/install
-  $(INSTALL_DIR) $(1)/usr/bin
-  $(INSTALL_BIN) $(PKG_BUILD_DIR)/roundtest $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/roundtest $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,roundtest))
