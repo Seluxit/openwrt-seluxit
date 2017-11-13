@@ -18,8 +18,8 @@ PKG_RELEASE:=2
 PKG_SOURCE_PROTO:=hg
 PKG_SOURCE_URL:=ssh://seluxit.com/../../revisioncontrol/hg/c/qlora
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_VERSION:=86569df5c42f
+PKG_SOURCE_VERSION:=32b84bf4ca29
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 PKG_MAINTAINER:=Sigitas Dagilis<sigis@seluxit.com>
 
 
